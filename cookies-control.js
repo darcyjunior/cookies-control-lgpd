@@ -5,6 +5,9 @@ Added JS based from https://github.com/origamid/publico/blob/main/cookies/cookie
 function cookies(functions) {
   const container = document.querySelector('.cookies-container');
   const save = document.querySelector('.cookies-save');
+  const triggerContainer = document.querySelector('.cookies-settings-trigger-container');
+  const bgOverlay = document.querySelector('.cookies-bg-overlay');
+
   if (!container || !save) return null;
 
   // localstorage verify cookie-pref
@@ -21,7 +24,6 @@ function cookies(functions) {
   //activate functions on preferences form
   function activateFunctions(pref) {
     pref.forEach((f) => functions[f]());
-    container.style.display = 'none';
     window.localStorage.setItem('cookies-pref', JSON.stringify(pref));
   }
 
@@ -29,10 +31,24 @@ function cookies(functions) {
   function handleSave() {
     const pref = getFormPref();
     activateFunctions(pref);
+    showTag(container, "hide");
+    showTag(triggerContainer, "show");
+    showTag(bgOverlay, "hide");
+  }
+
+  function showTag(selector, event) {
+    (event == "show") ? selector.style.display = 'block' : selector.style.display = 'none';
+  }
+
+  function handleTrigger() {
+    showTag(container, "show");
+    showTag(triggerContainer, "hide");
+    showTag(bgOverlay, "show");
   }
 
   // listen button save click
   save.addEventListener('click', handleSave);
+  triggerContainer.addEventListener('click', handleTrigger);
 }
 
 // function to enable marketing script 

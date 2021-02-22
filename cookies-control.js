@@ -23,7 +23,11 @@ function cookies(functions) {
 
   //activate functions on preferences form
   function activateFunctions(pref) {
-    pref.forEach((f) => functions[f]());
+    pref.forEach((f) => {
+      functions[f]();
+      // adds the check state according to preferences
+      document.querySelector('[data-function="' + f + '"]').checked = true;
+    });
     window.localStorage.setItem('cookies-pref', JSON.stringify(pref));
   }
 

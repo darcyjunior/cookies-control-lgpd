@@ -2,6 +2,8 @@
 
 Este projeto tem como objetivo auxiliar no desenvolvimento de uma ferramenta baesada em Javasctipt, CSS e Html para controle de adição de cookies em páginas web para atender a requisitos de leis de privacidade e proteção de dados pessoais como a Lei Geral de Proteçã de Dados Pessoais (LGPD).
 
+Este projeto foi inspirado do vídeo: https://www.youtube.com/watch?v=AyUyhkMyYLo
+
 Sugestões e críticas construtivas são muito bem-vindas.
 
 ##DISCLAIMER

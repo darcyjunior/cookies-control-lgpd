@@ -4,6 +4,8 @@ Este projeto tem como objetivo auxiliar no desenvolvimento de uma ferramenta bae
 
 Este projeto foi inspirado do vídeo: https://www.youtube.com/watch?v=AyUyhkMyYLo
 
+-> Neste link é possível ter uma visão de como é o funcionamento do sistema: https://cookies-control-lgpd.vercel.app/
+
 Sugestões e críticas construtivas são muito bem-vindas.
 
 ##DISCLAIMER
